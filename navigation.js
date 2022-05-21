@@ -41,6 +41,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginForm from './components/loginScreen/LoginForm';
 import SignupForm from './components/signupScreen/SignupForm';
+import HomeScreen from "./screens/HomeScreen"
 const AuthStack = createNativeStackNavigator();
 const AuthScreen=()=> {
   return (
@@ -54,7 +55,7 @@ const AuthScreen=()=> {
 }
 
 const HomeStack = createNativeStackNavigator();
-const HomeScreen=()=> {
+const Home=()=> {
      return (
        <HomeStack.Navigator>
             <HomeStack.Screen name="Home" component={HomeScreen}></HomeStack.Screen>
@@ -73,12 +74,15 @@ function App() {
   return (
     <NavigationContainer>
       <AppStack.Navigator>
+     
         <AppStack.Screen name="Auth" options={{
              headerShown:false
         }} component={AuthScreen} />
-        <AppStack.Screen name="HomeScreen" options={{
+
+<AppStack.Screen name="HomeScreen" options={{
              headerShown:false
-        }} component={HomeScreen} />
+        }} component={Home} />
+        
       </AppStack.Navigator>
     </NavigationContainer>
   );

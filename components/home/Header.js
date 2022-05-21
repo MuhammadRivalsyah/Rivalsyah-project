@@ -14,7 +14,7 @@ const Header = ({navigation}) => {
           </TouchableOpacity>
 
           <View style = {styles.iconsContainer}>
-          <TouchableOpacity onPress={() => navigation.push('NewPostScreen')}>
+          <TouchableOpacity onPress={() => navigation.navigate('NewPostScreen')}>
                     <Image
                          source={{
                               uri: 'https://img.icons8.com/fluency-systems-regular/60/ffffff/plus-2-math.png'
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
           justifyContent: 'space-between',
           alignItems: 'center',
           flexDirection: 'row',
-          marginHorizontal : '20',
+          marginHorizontal : 20,
      },
 
      iconsContainer:{
